@@ -2,96 +2,135 @@
 
 A project based learning path for becoming an expert digital analytics practitioner.
 
-Digital Analytics practitioner: 
+Digital Analytics practitioner: a professional who applies data analysis and statistical techniques to help organizations make informed business decisions. Typically 
+using data collected by Analytics tools about user behaviour on digital platforms such as websites and apps.
 
 
 
-## 0. Create a website [MUST HAVE]
+## 0. Create a website [CORE]
 
 By any means necessary create a website. There are many free and low cost platforms to achieve this.
 
-- github pages
-- wordpress
-- digital ocean app platforms
+- [Github pages](https://pages.github.com/)
+- [Wordpress on Digital Ocean](https://www.digitalocean.com/solutions/wordpress-hosting).
+- [Wordpress on Hostinger](https://www.hostinger.com/wordpress-hosting)
+- [Static site on Digital Ocean app platforms](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform)
 
 Skills:
 
 - git
 - github
 - server access and management
-- docker
 
 
-## 1. Add web analytics tracking
+## 1. Add web analytics tracking [CORE]
 
-Learn how to implement web analytics tracking technology on a website by adding tracking to your website.
+Learn how to implement web analytics tracking technology on a website by adding (simple page view) tracking to your website. 
 
-There 
+Verify the analytics tracking is working through debugging in the browser and monitoring stats in the platform.
 
-- Google Analytics
-- Matomo / Piwik
-- Plausible
-- Umami
+Using multiple platforms to track usage of your website is fine, even encouraged!
+
+There are free options or self hosted options for this such as
+
+- Google Analytics [FREE - 14 months of history retention]
+- Matomo / Piwik [SAAS | Self hosting]
+- [Mixpanel](https://mixpanel.com/home/) [FREE UP TO 1M events per month]
+- Plausible [SAAS | Self hosted]
+- Umami [FREE UP TO 100k events per month]
+
+Self hosted resources:
+- https://www.pikapods.com/apps#analytics
+- https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#analytics
+- https://caprover.com/
+- https://apps.yunohost.org/catalog?search=analytics
+
 
 Skills developed:
 
 - HTML
 - Javascript
-- Web tracking debugging
+- Web tracking debugging (Omnibug)
 - Browser developer tools
+- Server management (if self hosted)
 
 
-### 2a. Advanced tracking [OPTIONAL]
+### 1a. Advanced tracking [OPTIONAL]
 
-__Implementation specialist track (HTML + Javascript).__ Dive deep on these 
- 
-button click tracking - when a user clicks a button send tracking to platform
+__Implementation specialist track (HTML + Javascript).__ Dive deep on this side quest to become an expert in web tracking implementation.
 
-conversion tracking - when a user clicks a pdf download
+Add further tracking to the website to record more detailed interactions:
 
-Use a tag management system like Google Tag Manager
+- button click tracking - Capture how many times and on what pages buttons are clicked
+- conversion tracking - Enable conversion tracking on some action eg. downloading a PDF
+- scroll depth - Track how far down a page users scroll.
 
-Scroll tracking
-
-
-
-3. Create various reports using the web analytics platform.
+Use a tag management system like Google Tag Manager or Matomo Tag Manager. Trigger events and analytics tracking from within the Tag Management system.
 
 
-4. Query raw data directly
 
-Data engineer track (SQL + maybe python)
+
+## 2. Create various reports using the web analytics platform.
+
+In the web analytics platform you have chosen, have a poke around and build different kinds of reports if 
+the platform offers that.
+
+
+### 2a. Advanced Data Analysis
+
+__Data analysis track__ Deep dive on this side quest to develop data analysis skills. Bonus points for creating a powerpoint deck (or video) 
+explaining the findings of the analysis.
+
+- Identify key themes in the most popular pages
+- Create a forecast for daily visits over the next 30 days.
+- Is there any correlation with daily page views and the daily weather in your home town / city?
+- How does my website perform in terms of mobile vs. desktop traffic, and are there opportunities for improvement?
+
+
+## 3. Query raw data directly
+
+Gain access to the raw data that is being collected by your web analytics platform of choice.
+
 
 - Google Analytics :: export data to BigQuery
-- Other :: query database directly (access server or docker container)
+- Other Web Tracking tool :: If self hosted query database directly (access server or docker container). If a SAAS web analytics tool was chosen, the raw data will likely need to be exported before being able to access.
 
 
 Skills
 
 - SQL
+- Python (recommended)
 
 
-4a. Advanced data access and manipulation
+### 3a. Advanced data access and manipulation
 
-- Google Analytics
-    model data. Dataform in BigQuery
+__Data engineer track (SQL + Python)__ Deep dive on this side quest to develop skills aligned with Data Engineering or Analytics Engineering
 
-- Other
-    set up regular exports to data warehouse (ETL) into Redshift, clickhouse, sqlite, BigQuery, 
-    Automate exports
-    what happens if an export fails on a particular day. will the gap be filled on subsequent runs?
+__Google Analytics__
 
-Change data capture
+Model the Google Analytics export data to make potential reporting and analysis easier. Dataform in BigQuery is a good tool choice for this.
+
+__Other Web Analytics Tool__
+
+Set up regular data exports to a data warehouse of your choosing (Extract Transform Load). Popular modern cloud data warehouse choices include:
+- BigQuery
+- Clickhouse
+- Snowflake
+
+Alternatively the data can be extracted to a SQLite or DuckDB database for local analysis and storage.
+
+Make the automated export idempotent and self healing. Will duplicate extracts result in duplicate data? What happens if an export fails on a particular day. will the gap be filled on subsequent runs?
 
 
-5. Visualise data
+## 5. Visualise data
+
+Once access to raw data has been established, start building visualisations and reports based on the data
 
 - LookerStudio
 - PowerBI
 - Tableau
 - Redash
-
-
+- Excel or Google Sheets
 - Streamlit
 - Evidence
 - Observable
