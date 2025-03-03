@@ -2,8 +2,17 @@
 
 A project based learning path for becoming an expert digital analytics practitioner.
 
-Digital Analytics practitioner: a professional who applies data analysis and statistical techniques to help organizations make informed business decisions. Typically 
+__Digital Analytics practitioner__: a professional who applies data analysis and statistical techniques to help organizations make informed business decisions. Typically 
 using data collected by Analytics tools about user behaviour on digital platforms such as websites and apps.
+
+At the core of this curriculum is having a website and analytics tracking on it. This is a must!
+
+Each of the other 3 areas can be thought of as a buffet. They do not rely on each other and can be approached in any order.
+
+For someone interested in developing data analysis skills, they might do areas 0, 1, 2 and 2a. Spending a considerable portion
+of time in 2a (Advanced Data Analysis) answering various questions about the data, maybe some of those questions are AI generated.
+
+Use of Generative AI is encouraged to help fill any knowledge gaps. Getting error messages along the way means you're learning.
 
 
 
@@ -25,15 +34,17 @@ Skills:
 
 ## 1. Add web analytics tracking [CORE]
 
+__Default: Google Analytics 4__
+
 Learn how to implement web analytics tracking technology on a website by adding (simple page view) tracking to your website. 
 
-Verify the analytics tracking is working through debugging in the browser and monitoring stats in the platform.
+Verify the analytics tracking is working through debugging (browser dev tools or (Omnibug)[https://marquinsmith.com/2023/08/06/omnibug-part-1/]) in the browser. Also verify by monitoring stats in the platform.
 
-Using multiple platforms to track usage of your website is fine, even encouraged!
+Using multiple platforms to track usage of your website is fine, even encouraged! Eg Google Analytics and Matomo.
 
 There are free options or self hosted options for this such as
 
-- Google Analytics [FREE - 14 months of history retention]
+- Google Analytics 4 [FREE - 14 months of history retention]
 - Matomo / Piwik [SAAS | Self hosting]
 - [Mixpanel](https://mixpanel.com/home/) [FREE UP TO 1M events per month]
 - Plausible [SAAS | Self hosted]
@@ -122,7 +133,7 @@ Alternatively the data can be extracted to a SQLite or DuckDB database for local
 Make the automated export idempotent and self healing. Will duplicate extracts result in duplicate data? What happens if an export fails on a particular day. will the gap be filled on subsequent runs?
 
 
-## 5. Visualise data
+## 4. Visualise data
 
 Once access to raw data has been established, start building visualisations and reports based on the data
 
